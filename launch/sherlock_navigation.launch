@@ -1,0 +1,24 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="open_rviz" default="true"/>
+
+  <!-- move_base -->
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <param name="base_global_planner" value="global_planner/GlobalPlanner" />
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
+    <rosparam file="$(find sherlock_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find sherlock_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find sherlock_navigation)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/move_base_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/global_planner_params.yaml" command="load" />
+  </node>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find turtlebot3_navigation)/rviz/turtlebot3_navigation.rviz"/>
+  </group>
+
+</launch>

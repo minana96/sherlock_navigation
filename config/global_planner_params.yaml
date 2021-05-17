@@ -1,0 +1,16 @@
+GlobalPlanner:
+
+  # General
+  old_navfn_behavior: false
+  use_quadratic: true
+  use_dijkstra: true
+  use_grid_path: false
+  allow_unknown: true
+  visualize_potential: false
+  
+  # Cost factors
+  lethal_cost: 253
+  neutral_cost: 66
+  cost_factor: 0.55
+
+  
