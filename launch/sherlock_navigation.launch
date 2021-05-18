@@ -3,7 +3,7 @@
   <arg name="open_rviz" default="true"/>
 
   <!-- move_base -->
-  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base">
     <param name="base_global_planner" value="global_planner/GlobalPlanner" />
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <rosparam file="$(find sherlock_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
