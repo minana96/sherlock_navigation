@@ -8,7 +8,7 @@ resample_interval: 1
 transform_tolerance: 0.5
 recovery_alpha_slow: 0.00
 recovery_alpha_fast: 0.00
-gui_publish_rate: 50.0
+gui_publish_rate: -1.0
 
 # Laser scan
 scan: scan
