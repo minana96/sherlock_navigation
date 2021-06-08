@@ -7,6 +7,7 @@ GlobalPlanner:
   use_grid_path: false
   allow_unknown: true
   visualize_potential: false
+  #allow_unknown: true
   
   # Cost factors
   lethal_cost: 253
