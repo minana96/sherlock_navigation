@@ -1,6 +1,7 @@
 obstacle_range: 3.0
 raytrace_range: 3.5
 max_obstacle_height: 0.2
+#track_unknown_space: true
 
 footprint: [[-0.105, -0.105], [-0.105, 0.105], [0.041, 0.105], [0.041, -0.105]]
 
