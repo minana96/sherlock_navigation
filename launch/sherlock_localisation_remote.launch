@@ -1,0 +1,17 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="remote_machine_name" default="remote_pc"/>
+  <arg name="path_to_remote_ws" default="/home/milica/catkin_ws"/>
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+ 
+  <!-- AMCL -->
+  <node pkg="amcl" type="amcl" name="amcl" machine="$(arg remote_machine_name)">
+    <param name="initial_pose_x" value="$(arg initial_pose_x)"/>
+    <param name="initial_pose_y" value="$(arg initial_pose_y)"/>
+    <param name="initial_pose_a" value="$(arg initial_pose_a)"/>
+    <rosparam command="load" file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/amcl_params.yaml" />
+  </node>
+
+</launch>
