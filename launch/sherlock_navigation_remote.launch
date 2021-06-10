@@ -1,19 +1,18 @@
 <launch>
   <!-- Arguments -->
   <arg name="remote_machine_name" default="remote_pc"/>
-  <arg name="path_to_remote_ws" default="/home/milica/catkin_ws"/>
 
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" machine="$(arg remote_machine_name)">
     <param name="base_global_planner" value="global_planner/GlobalPlanner" />
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/global_costmap_params.yaml" command="load" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/move_base_params.yaml" command="load" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/dwa_local_planner_params.yaml" command="load" />
-    <rosparam file="$(arg path_to_remote_ws)/src/sherlock_navigation/config/global_planner_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />
+    <rosparam file="$(find sherlock_navigation)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find sherlock_navigation)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/move_base_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find sherlock_navigation)/config/global_planner_params.yaml" command="load" />
   </node>
 
 </launch>
