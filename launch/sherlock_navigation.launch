@@ -1,6 +1,6 @@
 <launch>
   <!-- Arguments -->
-  <arg name="open_rviz" default="true"/>
+  <arg name="open_rviz" default="false"/>
 
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base">
