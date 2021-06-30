@@ -1,6 +1,7 @@
 <launch>
   <!-- Arguments -->
   <arg name="open_rviz" default="false"/>
+  <arg name="dwa_local_planner_params" default="$(find sherlock_navigation)/config/dwa_local_planner_params.yaml"/>
 
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base">
@@ -11,7 +12,7 @@
     <rosparam file="$(find sherlock_navigation)/config/local_costmap_params.yaml" command="load" />
     <rosparam file="$(find sherlock_navigation)/config/global_costmap_params.yaml" command="load" />
     <rosparam file="$(find sherlock_navigation)/config/move_base_params.yaml" command="load" />
-    <rosparam file="$(find sherlock_navigation)/config/dwa_local_planner_params.yaml" command="load" />
+    <rosparam file="$(arg dwa_local_planner_params)" command="load" />
     <rosparam file="$(find sherlock_navigation)/config/global_planner_params.yaml" command="load" />
   </node>
 
