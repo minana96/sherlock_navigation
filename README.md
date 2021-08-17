@@ -1,6 +1,6 @@
 # *sherlock_navigation* ROS package
 
-This repository represent the *sherlock_navigation* ROS pacakge, the package that configures and launches navigation task via [ROS navigation stack](http://wiki.ros.org/navigation). Navigation stack consists of muliple ROS packages that can be added as plugins to the [move_base](http://wiki.ros.org/move_base?distro=noetic) ROS node. The *sherlock_navigation* package is intended for ROS Melodic. The repository needs to be cloned to the catkin workspace on the robot (no need to clone it to the PC) and compiled with following commands:
+This repository represents the *sherlock_navigation* ROS pacakge, the package that configures and launches navigation task via [ROS navigation stack](http://wiki.ros.org/navigation). Navigation stack consists of muliple ROS packages that can be added as plugins to the [move_base](http://wiki.ros.org/move_base?distro=noetic) ROS node. The *sherlock_navigation* package is intended for ROS Melodic. The repository needs to be cloned to the catkin workspace on the robot (no need to clone it to the PC) and compiled with following commands:
 ```bash
 cd <catkin_ws_dir>/src
 git clone git@github.com:minana96/sherlock_navigation.git
