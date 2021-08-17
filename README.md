@@ -39,4 +39,4 @@ The navigation task is configured and launched via two launch files:
 sudo apt install ros-melodic-rviz
 sudo apt install ros-melodic-turtlebot3-navigation
 ```
-- **sherlock_navigation_remote.launch**: navigation is launched on the remote machine that is passed as an argument. If this launch file is used, it is important that packages within ROS navigation stack are also installed on the target remote machine.
+- **sherlock_navigation_remote.launch**: navigation is launched on the remote machine that is passed as a parameter. If this launch file is used, it is important that packages within ROS navigation stack are also installed on the target remote machine.
